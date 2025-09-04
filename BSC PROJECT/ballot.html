@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>Ballot – eVoting</title>
+</head>
+<body>
+  <header class="header">
+    <img src="logo1.png" alt="School Logo">
+    <h1>DEPARTMENT  OF COMPUTER SCIENCE</h1>
+  </header>
+   <h2>Presidential Candidates</h2>
+<div class="category">
+  <div class="candidate">
+    <img src="man 1.jpg" alt="Candidate 1">
+    <h3>Jane Doe</h3>
+    <p class="bio">Final year student of Computer Science.</p>
+    <small class="slogan">"Transparency and Progress"</small>
+    <label>
+      <input type="radio" name="president" value="Jane Doe"> Vote
+    </label>
+  </div>
+
+  <div class="candidate">
+    <img src="woman 2.jpg" alt="Candidate 2">
+    <h3>Andrew Smith</h3>
+    <p class="bio">Active in student union activities since 2021.</p>
+    <small class="slogan">"Your Voice, My Action"</small>
+    <label>
+      <input type="radio" name="president" value="Andrew Smith"> Vote
+    </label>
+  </div>
+  <div class="candidate">
+    <img src="woman4.jpg" alt="Candidate 2">
+    <h3>Debby Henry </h3>
+    <p class="bio">An active female involved in student union activities since 2021.</p>
+    <small class="slogan">"Power to the people"</small>
+    <label>
+      <input type="radio" name="president" value="Debby Henry"> Vote
+    </label>
+  </div>
+   <div class="candidate">
+    <img src="woman3.jpg" alt="Candidate 2">
+    <h3>Jerry  Smith</h3>
+    <p class="bio">Active in student union activities since 2021.</p>
+    <small class="slogan">"Your Voice, My Action"</small>
+    <label>
+      <input type="radio" name="president" value="Jerry Smith"> Vote
+    </label>
+  </div>
+</div>
+ <h2>Vice- Presidential Candidates</h2>
+<div class="category">
+  <div class="candidate">
+    <img src="man 3.jpg" alt="Candidate 1">
+    <h3>John Doe</h3>
+    <p class="bio">Final year student of Computer Science.</p>
+    <small class="slogan">"Transparency and Progress"</small>
+    <label>
+      <input type="radio" name="vice_president" value="John Doe"> Vote
+    </label>
+  </div>
+  <div class="candidate">
+    <img src="man 4.jpg" alt="Candidate 2">
+    <h3>John Smith</h3>
+    <p class="bio">Active in student union activities since 2021.</p>
+    <small class="slogan">"Your Voice, My Action"</small>
+    <label>
+      <input type="radio" name="vice_president" value="John Smith"> Vote
+    </label>
+  </div>
+  <div class="candidate">
+    <img src="Image (1).jpg" alt="Candidate 2">
+    <h3>Debby Michael</h3>
+    <p class="bio">An active female involved in student union activities since 2021.</p>  
+    <small class="slogan">"Power to the people"</small>
+    <label>
+      <input type="radio" name="vice_president" value="Debby Michael"> Vote
+    </label>
+  </div>
+</div>
+
+<h2>Secretary Candidates</h2>
+<div class="category">
+  <div class="candidate">
+    <img src="man 5.jpg" alt="Candidate 3">
+    <h3>Eze Chukwu</h3>
+    <p class="bio">2nd year Accounting major, experienced note taker.</p>
+    <small class="slogan">"Organized and Efficient"</small>
+    <label>
+      <input type="radio" name="secretary" value="Eze Chukwu"> Vote
+    </label>
+  </div>
+
+  <div class="candidate">
+    <img src="man 6.jpg" alt="Candidate 4">
+    <h3>Emeka Okoro</h3>
+    <p class="bio">Class rep for two years, loves team work.</p>
+    <small class="slogan">"Order and Transparency"</small>
+    <label>
+      <input type="radio" name="secretary" value="Emeka Okoro"> Vote
+    </label>
+  </div>
+  <div class="candidate">
+    <img src="man 8.jpg" alt="Candidate 4">
+    <h3>Okoro Ben</h3>
+    <p class="bio">Class rep for four years, loves team work.</p>
+    <small class="slogan">"Strength and Transparency"</small>
+    <label>
+      <input type="radio" name="secretary" value="Okoro Ben"> Vote
+    </label>
+  </div>
+  <div class="candidate">
+    <img src="man7.jpg" alt="Candidate 4">
+    <h3>Michael Oba</h3>
+    <p class="bio">Class rep for two years, loves team work.</p>
+    <small class="slogan">"Peace and Transparency"</small>
+    <label>
+      <input type="radio" name="secretary" value="Michael Oba"> Vote
+    </label>
+  </div>
+</div>
+
+<button id="submitBtn">Submit Vote</button>
+  <script>
+// how long before redirect (in milliseconds)
+const TIMEOUT = 2 * 60 * 1000; // 2 minutes
+
+let timer;
+
+// start the timer
+function startTimer() {
+  timer = setTimeout(() => {
+    // redirect to login page
+    window.location.href = "index.html";
+  }, TIMEOUT);
+}
+
+// reset timer on any activity
+function resetTimer() {
+  clearTimeout(timer);
+  startTimer();
+}
+
+// events that count as "activity"
+['mousemove', 'keydown', 'click', 'touchstart'].forEach(evt => {
+  window.addEventListener(evt, resetTimer, false);
+});
+
+// start timer on load
+startTimer();
+</script>
+
+</body>
+</html>
