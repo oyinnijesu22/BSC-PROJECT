@@ -1,6 +1,127 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>eVoting – Home</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <img src="logo1.png" alt="School Logo" />
+    <h1>DEPARTMENT OF COMPUTER SCIENCE</h1>
+  </header>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="hamburger">&#9776;</div>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="register.html">Register</a></li>
+      <li><a href="contact-us.html">Contact Us</a></li>
+      <li><a href="help.html">Help</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <h2>Welcome to the E-Voting Platform</h2>
+    <p>Secure, fast, and easy online voting for our department elections.</p>
+    <a href="login.html" class="btn">Login to Vote</a>
+  </section>
+
+  <!-- About Section -->
+  <section class="about">
+    <p>
+    The E-Voting platform is a secure, easy-to-use system designed to allow 
+    students of the Department of Computer Science to cast their votes online.
+    This eliminates the need for physical ballot boxes and ensures 
+    transparency, fairness, and quick counting of votes.
+  </p>
+  <p>
+    Our mission is to create a democratic environment where every student can 
+    exercise their voting rights from anywhere, using a device with internet access.
+  </p>
+  </section>
+   <h2>Presidential Candidates</h2>
+<div class="category">
+  <div class="candidate">
+    <img src="man 1.jpg" alt="Candidate 1">
+    <h3>Jane Doe</h3>
+  </div>
+
+  <div class="candidate">
+    <img src="woman 2.jpg" alt="Candidate 2">
+    <h3>Andrew Smith</h3>
+  </div>
+  <div class="candidate">
+    <img src="woman4.jpg" alt="Candidate 2">
+    <h3>Debby Henry </h3>
+  </div>
+   <div class="candidate">
+    <img src="woman3.jpg" alt="Candidate 2">
+    <h3>Jerry  Smith</h3>
+  </div>
+</div>
+ <h2>Vice- Presidential Candidates</h2>
+<div class="category">
+  <div class="candidate">
+    <img src="man 3.jpg" alt="Candidate 1">
+    <h3>John Doe</h3>
+  </div>
+  <div class="candidate">
+    <img src="man 4.jpg" alt="Candidate 2">
+    <h3>John Smith</h3>
+  </div>
+  <div class="candidate">
+    <img src="Image (1).jpg" alt="Candidate 2">
+    <h3>Debby Michael</h3>
+  </div>
+</div>
+
+<h2>Secretary Candidates</h2>
+<div class="category">
+  <div class="candidate">
+    <img src="man 5.jpg" alt="Candidate 3">
+    <h3>Eze Chukwu</h3>
+  </div>
+
+  <div class="candidate">
+    <img src="man 6.jpg" alt="Candidate 4">
+    <h3>Emeka Okoro</h3>
+  </div>
+  <div class="candidate">
+    <img src="man 8.jpg" alt="Candidate 4">
+    <h3>Okoro Ben</h3>
+  </div>
+  <div class="candidate">
+    <img src="man7.jpg" alt="Candidate 4">
+    <h3>Michael Oba</h3>
+  </div>
+</div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>&copy; 2025 Department of Computer Science</p>
+    <a href="terms.html">Terms & Conditions</a> |
+    <a href="faq.html">FAQ</a> |
+    <a href="privacy.html">Privacy Policy</a>
+  </footer>
+
+  <!-- JS for Hamburger -->
+  <script>
+    const hamburger = document.querySelector('.hamburger');
+    const navMenu = document.querySelector('.navbar ul');
+    hamburger.addEventListener('click', () => {
+      navMenu.classList.toggle('show');
+    });
+  </script>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Voter Login - eVoting</title>
@@ -24,3 +145,4 @@
   </div>
 </body>
 </html>
+
