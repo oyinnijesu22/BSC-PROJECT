@@ -14,6 +14,7 @@
 
   <div class="login-container">
     <h2>Voter Login</h2>
+    <small>Please login with your ACU  matric number and password to access the ballot.</small>
     <form action="ballot.html" method="get">
       <label for="Matric number">Matric Number:</label>
       <input type="text" id="Matric number" name="Matric number" placeholder="Enter your matric number" required>
@@ -24,3 +25,30 @@
   </div>
 </body>
 </html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Voter Login - eVoting</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="header">
+    <img src="logo1.png" alt="School Logo">
+    <h1>DEPARTMENT OF COMPUTER SCIENCE</h1>
+  </header>
+
+  <div class="login-container">
+    <h2>Voter Login</h2>
+    <form action="ballot.html" method="get">
+      <label for="Matric number">Matric Number:</label>
+      <input type="text" id="Matric number" name="Matric number" placeholder="Enter your matric number" required>
+      <label for="password">Password</label>
+      <input type="password" id="password" name="password" placeholder="Enter your password" minlength="6" required>
+      <button type="submit">Login</button>
+    </form>
+  </div>
+</body>
+</html>
+
