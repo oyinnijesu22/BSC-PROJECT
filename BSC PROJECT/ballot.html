@@ -11,6 +11,158 @@
     <img src="logo1.png" alt="School Logo">
     <h1>DEPARTMENT  OF COMPUTER SCIENCE</h1>
   </header>
+  <form id="voteForm">
+   <h2>Presidential Candidates</h2>
+<div class="category">
+  <div class="candidate">
+    <img src="man 1.jpg" alt="Candidate 1">
+    <h3>Jane Doe</h3>
+    <p class="bio">400 level</p>
+    <label>
+      <input type="radio" name="president" value="Jane Doe"> Vote
+    </label>
+  </div>
+
+  <div class="candidate">
+    <img src="woman 2.jpg" alt="Candidate 2">
+    <h3>Andrew Smith</h3>
+    <p class="bio">500 level</p>
+    <label>
+      <input type="radio" name="president" value="Andrew Smith"> Vote
+    </label>
+  </div>
+  <div class="candidate">
+    <img src="woman4.jpg" alt="Candidate 2">
+    <h3>Debby Henry </h3>
+    <p class="bio">400 level</p>
+    <label>
+      <input type="radio" name="president" value="Debby Henry"> Vote
+    </label>
+  </div>
+   <div class="candidate">
+    <img src="woman3.jpg" alt="Candidate 2">
+    <h3>Jerry  Smith(smithyy)</h3>
+    <p class="bio">500 level</p>
+    <label>
+      <input type="radio" name="president" value="Jerry Smith"> Vote
+    </label>
+  </div>
+</div>
+ <h2>Vice- Presidential Candidates</h2>
+<div class="category">
+  <div class="candidate">
+    <img src="man 3.jpg" alt="Candidate 1">
+    <h3>John Doe(big doe)</h3>
+    <p class="bio">400 level</p>
+    <label>
+      <input type="radio" name="vice_president" value="John Doe"> Vote
+    </label>
+  </div>
+  <div class="candidate">
+    <img src="man 4.jpg" alt="Candidate 2">
+    <h3>John Smith(nicky)</h3>
+    <p class="bio">300 level</p>
+    <label>
+      <input type="radio" name="vice_president" value="John Smith"> Vote
+    </label>
+  </div>
+  <div class="candidate">
+    <img src="Image (1).jpg" alt="Candidate 2">
+    <h3>Debby Michael(Peppy)</h3>
+    <p class="bio">400 levell </p>  
+    <label>
+      <input type="radio" name="vice_president" value="Debby Michael"> Vote
+    </label>
+  </div>
+</div>
+
+<h2>Secretary Candidates</h2>
+<div class="category">
+  <div class="candidate">
+    <img src="man 5.jpg" alt="Candidate 3">
+    <h3>Eze Chukwu(chuks)</h3>
+    <p class="bio">300 level</p>
+    <label>
+      <input type="radio" name="secretary" value="Eze Chukwu"> Vote
+    </label>
+  </div>
+
+  <div class="candidate">
+    <img src="man 6.jpg" alt="Candidate 4">
+    <h3>Emeka Okoro(kroks)</h3>
+    <p class="bio">300 level</p>
+    <label>
+      <input type="radio" name="secretary" value="Emeka Okoro"> Vote
+    </label>
+  </div>
+  <div class="candidate">
+    <img src="man 8.jpg" alt="Candidate 4">
+    <h3>Okoro Ben(Ben 10)</h3>
+    <p class="bio"> 500 level</p>
+    <label>
+      <input type="radio" name="secretary" value="Okoro Ben"> Vote
+    </label>
+  </div>
+  <div class="candidate">
+    <img src="man7.jpg" alt="Candidate 4">
+    <h3>Michael Oba(obas)</h3>
+    <p class="bio">500 level</p>
+    <label>
+      <input type="radio" name="secretary" value="Michael Oba"> Vote
+    </label>
+  </div>
+</div>
+    <button type="submit" class="vote-btn">Submit Vote</button>
+  <div id="thankYouMessage">
+    Thank you for voting! 🗳️
+  </div>
+  </form>
+</body>
+</html>
+<script>
+document.getElementById('voteForm').addEventListener('submit', function(event) {
+  // Add all your category names here
+  const categories = ['president','vice_president','secretary'];
+  
+  let allVoted = true;
+
+  categories.forEach(function(cat){
+    const selected = document.querySelector(`input[name="${cat}"]:checked`);
+    if(!selected) {
+      allVoted = false;
+    }
+  });
+
+  if(!allVoted) {
+    event.preventDefault();
+    alert("⚠️ Please vote in all categories before submitting.");
+  } else {
+    event.preventDefault();
+    this.style.display = 'none';
+    const thankYou = document.getElementById('thankYouMessage');
+    thankYou.style.display = 'block';
+
+    // redirect after 5 seconds
+    setTimeout(function () {
+      window.location.href = 'index.html';
+    }, 5000);
+  }
+});
+</script>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>Ballot – eVoting</title>
+</head>
+<body>
+  <header class="header">
+    <img src="logo1.png" alt="School Logo">
+    <h1>DEPARTMENT  OF COMPUTER SCIENCE</h1>
+  </header>
    <h2>Presidential Candidates</h2>
 <div class="category">
   <div class="candidate">
@@ -155,3 +307,4 @@ startTimer();
 
 </body>
 </html>
+
